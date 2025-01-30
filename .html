@@ -1,0 +1,52 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Bonito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #ff3b30;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao meu site bonito!</h1>
+        <p>Clique no botão para ver a mágica acontecer.</p>
+        <button onclick="mudarCor()">Mudar Cor</button>
+    </div>
+
+    <script>
+        function mudarCor() {
+            const cores = ['#ff9a9e', '#fad0c4', '#ffdde1', '#fc6076', '#ff6f61'];
+            document.body.style.background = `linear-gradient(135deg, ${cores[Math.floor(Math.random() * cores.length)]}, ${cores[Math.floor(Math.random() * cores.length)]})`;
+        }
+    </script>
+</body>
+</html>
